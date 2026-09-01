@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stencilla — Your AI Outfit Coach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="scrub-indicator">
+  <svg width="34" height="34" viewBox="0 0 34 34">
+    <circle class="track" cx="17" cy="17" r="14" fill="none" stroke-width="2"/>
+    <circle class="bar" id="scrubBar" cx="17" cy="17" r="14" fill="none" stroke-width="2" stroke-linecap="round" stroke-dasharray="88" stroke-dashoffset="88"/>
+  </svg>
+</div>
+
+<!-- ============ NAV ============ -->
+<header>
+  <nav class="nav-inner glass" id="navInner">
+    <button type="button" class="logo" data-target="#home"><span class="dot"></span>Stencilla</button>
+    <div class="nav-links" id="navLinksList">
+      <button type="button" data-target="#product" data-nav="product">Product</button>
+      <button type="button" data-target="#features" data-nav="features">Features</button>
+      <button type="button" data-target="#solutions" data-nav="solutions">Solutions</button>
+      <button type="button" data-target="#testimonials" data-nav="testimonials">Testimonials</button>
+      <button type="button" data-target="#pricing" data-nav="pricing">Pricing</button>
+    </div>
+    <div class="nav-cta">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M1 4H15M1 8H15M1 12H15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" class="btn btn-primary" data-target="#pricing"><span class="btn-label">Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow reveal">The outfit coach</div>
+      <h1 class="reveal reveal-delay-1">Your permanent, <em>personalized</em> stylist</h1>
+      <p class="reveal reveal-delay-2">Stencilla is a calm, editorial styling studio in your pocket. It helps you combine clothes confidently — a private, helpful assistant that builds looks from the wardrobe you already own.</p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#pricing" class="btn btn-primary"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="#product" class="btn btn-glass"><span>Learn more</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+      <div class="hero-meta reveal reveal-delay-3">
+        <div><span class="num">15K+</span><span class="lbl">Happy users</span></div>
+        <div><span class="num">3+</span><span class="lbl">Years of style AI</span></div>
+        <div><span class="num">−30%</span><span class="lbl">Decision fatigue</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal-delay-2">
+      <video id="heroScrubVideo" muted playsinline autoplay loop preload="auto">
+        <source src="assets/hero-card.webm" type="video/webm">
+        <source src="assets/hero-card.mp4" type="video/mp4">
+      </video>
+      <div class="hero-visual-frame"></div>
+      <div class="hero-visual-tag"><span class="dot"></span>Stencilla studio</div>
+      <div class="hero-visual-caption">
+        <div class="cap-title">Your wardrobe, styled.</div>
+        <div class="cap-sub">Calm. Personal. Editorial.</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust reveal">
+  <div class="container trust-inner">
+    <p>Trusted by fashion-forward individuals</p>
+    <div class="trust-pills">
+      <span>Everyday stylists</span>
+      <span>Fashion enthusiasts</span>
+      <span>Busy professionals</span>
+      <span>Wardrobe minimalists</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCT ============ -->
+<section class="section-pad" id="product">
+  <div class="container product-grid">
+    <div>
+      <div class="eyebrow reveal">Product</div>
+      <h2 class="reveal reveal-delay-1">Unlock your wardrobe's full potential.</h2>
+      <p class="reveal reveal-delay-2">Most people own enough clothes but lack styling knowledge. Stencilla is a permanent, personalized stylist that knows your wardrobe.</p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#pricing" class="btn btn-primary"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="#" class="btn btn-glass"><span>Watch demo</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4 3L9 6L4 9V3Z" fill="currentColor"/></svg></span></a>
+      </div>
+    </div>
+    <div class="product-side glass reveal reveal-delay-2">
+      <div class="mini-stats">
+        <div class="card"><b>124</b><span>Items catalogued</span></div>
+        <div class="card"><b>18</b><span>Looks this week</span></div>
+      </div>
+      <div class="app-mock glass-strong">
+        <div class="app-mock-top">
+          <span class="app-mock-title">Today's outfit</span>
+          <div class="dots"><i></i><i></i><i></i></div>
+        </div>
+        <div class="app-rows">
+          <div class="bar w2"></div>
+          <div class="bar w1"></div>
+          <div class="bar w3"></div>
+        </div>
+        <div class="app-cards">
+          <div class="mini"></div>
+          <div class="mini"></div>
+          <div class="mini"></div>
+          <div class="mini"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES INTRO (3 cards) ============ -->
+<section class="section-pad" id="features">
+  <div class="container">
+    <div class="eyebrow reveal">Features</div>
+    <h2 class="reveal reveal-delay-1" style="font-size:clamp(30px,4vw,46px);max-width:680px;margin:16px 0 14px;">Your personal stylist, always on call.</h2>
+    <p class="reveal reveal-delay-2" style="color:var(--text-2);font-size:16px;max-width:520px;">Stencilla knows your exact wardrobe, body, and lifestyle to build looks from what you already own.</p>
+
+    <div class="feat-cards">
+      <div class="feat-card glass reveal">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L13 8H19L14 12L16 18L11 14L6 18L8 12L3 8H9L11 2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <h3>Outfit generation</h3>
+        <p>Get instant, personalized outfit ideas built entirely from the pieces already in your closet.</p>
+      </div>
+      <div class="feat-card glass reveal reveal-delay-1">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="3" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="3" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="12" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.3"/></svg></div>
+        <h3>Wardrobe analysis</h3>
+        <p>Understand your style patterns, spot the gaps, and see exactly what's working in your closet.</p>
+      </div>
+      <div class="feat-card glass reveal reveal-delay-2">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2C6 2 2 6 2 11C2 16 6 20 11 20C16 20 20 16 20 11" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M14 3L20 3L20 9" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 3L11 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <h3>Style coaching</h3>
+        <p>Learn to combine pieces confidently with notes that explain the why behind every pairing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE SPOTLIGHT (sticky) ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="eyebrow reveal" style="margin-bottom:16px;">About the product</div>
+    <div class="spotlight-wrap">
+      <div>
+        <div class="spotlight-item" data-spot="1">
+          <div class="eyebrow">Feature</div>
+          <h3>Personalized outfit coach.</h3>
+          <p>Stencilla acts as a permanent, personalized stylist that knows your exact wardrobe, body, and lifestyle — and never forgets a single piece you own.</p>
+          <a href="#pricing" class="btn btn-glass"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </div>
+        <div class="spotlight-item" data-spot="2">
+          <div class="eyebrow">Feature</div>
+          <h3>Curated from your closet.</h3>
+          <p>Our app builds every look directly from what you already own, maximizing the potential of your existing wardrobe instead of pushing you to buy more.</p>
+          <a href="#pricing" class="btn btn-glass"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </div>
+        <div class="spotlight-item" data-spot="3">
+          <div class="eyebrow">Feature</div>
+          <h3>Style confidence, everyday.</h3>
+          <p>Our app provides styling knowledge to combine items confidently, solving the common dressing dilemma — no more staring at a full closet with nothing to wear.</p>
+          <a href="#pricing" class="btn btn-glass"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        </div>
+      </div>
+      <div class="spotlight-side">
+        <div class="spotlight-visual glass active" data-visual="1">
+          <span class="spotlight-tag">Coach</span>
+          <div class="spot-visual-body"><div class="spot-shape"><div class="ring"></div><div class="ring"></div><div class="ring"></div><div class="core"></div></div></div>
+          <span class="spotlight-num">01</span>
+        </div>
+        <div class="spotlight-visual glass" data-visual="2">
+          <span class="spotlight-tag">Closet</span>
+          <div class="spot-visual-body">
+            <div class="closet-img-cards">
+              <div class="closet-img-card"><img src="assets/closet-img1.jpg" alt="Curated wardrobe flatlay"></div>
+              <div class="closet-img-card"><img src="assets/closet-img2.jpg" alt="Luxury closet interior"></div>
+            </div>
+          </div>
+          <span class="spotlight-num">02</span>
+        </div>
+        <div class="spotlight-visual glass" data-visual="3">
+          <span class="spotlight-tag">Confidence</span>
+          <div class="spot-visual-body" style="width:100%;">
+            <div class="app-rows" style="width:100%;">
+              <div class="bar w2"></div><div class="bar w1"></div><div class="bar w3"></div><div class="bar w1"></div>
+            </div>
+          </div>
+          <span class="spotlight-num">03</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS BENTO ============ -->
+<section class="section-pad" id="solutions">
+  <div class="container">
+    <div class="eyebrow reveal">Solutions</div>
+    <h2 class="reveal reveal-delay-1" style="font-size:clamp(30px,4vw,46px);max-width:640px;margin:16px 0 14px;">Designed for every personal style.</h2>
+    <p class="reveal reveal-delay-2" style="color:var(--text-2);font-size:16px;max-width:520px;">Stencilla helps you dress well and confidently, utilizing what you already own.</p>
+
+    <div class="bento">
+      <div class="bento-card bento-1 glass reveal">
+        <div class="bento-decor"></div>
+        <div class="bento-icon-big"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3L15.5 10.5L23 13L15.5 15.5L13 23L10.5 15.5L3 13L10.5 10.5L13 3Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div>
+          <h4>Everyday stylist</h4>
+          <p>Get daily outfit inspiration and guidance tailored to your wardrobe and preferences. Never wonder what to wear again.</p>
+        </div>
+      </div>
+      <div class="bento-card glass reveal reveal-delay-1">
+        <div class="bento-decor"></div>
+        <h4>Fashion enthusiasts</h4>
+        <p>Discover new ways to combine your favorite pieces and experiment with trends, all within your existing collection.</p>
+      </div>
+      <div class="bento-card glass reveal reveal-delay-2">
+        <div class="bento-decor"></div>
+        <h4>Wardrobe optimization</h4>
+        <p>Maximize the use of every item you own, reducing waste and extending the life of your clothing.</p>
+      </div>
+      <div class="bento-card glass reveal reveal-delay-2" style="grid-column:span 2;">
+        <div class="bento-decor"></div>
+        <h4>Busy professionals</h4>
+        <p>Save time and effort getting ready, with pre-planned outfits that fit your professional and personal life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFITS / STATS ============ -->
+<section class="section-pad">
+  <div class="container benefits-grid">
+    <div>
+      <div class="eyebrow reveal">Benefits</div>
+      <h2 class="reveal reveal-delay-1">Smart. Stylish. Sustainable. Welcome to Stencilla.</h2>
+      <p class="reveal reveal-delay-2">A permanent styling companion that turns the clothes you already own into outfits you actually want to wear.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card glass reveal">
+        <span class="num" data-count="60" data-suffix="%">+0%</span>
+        <span class="lbl">Outfit confidence</span>
+      </div>
+      <div class="stat-card glass reveal reveal-delay-1">
+        <span class="num" data-count="-30" data-suffix="%">0%</span>
+        <span class="lbl">Decision fatigue</span>
+      </div>
+      <div class="stat-card glass reveal reveal-delay-2">
+        <span class="num" data-count="15" data-suffix="K+">0K+</span>
+        <span class="lbl">Happy users</span>
+      </div>
+      <div class="stat-card glass reveal reveal-delay-3">
+        <span class="num" data-count="3" data-suffix="+">0+</span>
+        <span class="lbl">Years of style AI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section-pad" id="testimonials">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="eyebrow reveal" style="justify-content:center;">Testimonials</div>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(30px,4vw,46px);margin:16px 0;">What our users say.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card glass reveal">
+        <p class="testi-quote">"Stencilla has revolutionized how I get dressed. I feel more confident and stylish every single day."</p>
+        <div class="testi-person">
+          <div class="avatar">JD</div>
+          <div><div class="name">Jane Doe</div><div class="role">Influencer</div></div>
+        </div>
+      </div>
+      <div class="testi-card glass reveal reveal-delay-1">
+        <p class="testi-quote">"I love how Stencilla helps me find new combinations from my own closet. It's truly genius."</p>
+        <div class="testi-person">
+          <div class="avatar">CS</div>
+          <div><div class="name">Celine Smith</div><div class="role">Fashion blogger</div></div>
+        </div>
+      </div>
+      <div class="testi-card glass reveal reveal-delay-2">
+        <p class="testi-quote">"Their insights were practical, data-driven, and immediately actionable."</p>
+        <div class="testi-person">
+          <div class="avatar">MJ</div>
+          <div><div class="name">Mike Jones</div><div class="role">Busy professional</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section-pad" id="pricing">
+  <div class="container">
+    <div style="text-align:center;">
+      <div class="eyebrow reveal" style="justify-content:center;">Pricing</div>
+      <h2 class="reveal reveal-delay-1" style="font-size:clamp(30px,4vw,46px);margin:16px 0;">Pricing for your personal style.</h2>
+    </div>
+    <div class="price-grid">
+      <div class="price-card glass reveal">
+        <h3>Starter</h3>
+        <p class="desc">Perfect for individuals exploring basic styling.</p>
+        <div class="price-amount"><span class="amt">$0</span><span class="per">/mo</span></div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Basic outfit generation</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Limited wardrobe items</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Daily style tips</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Email support</li>
+        </ul>
+        <a href="#" class="btn btn-glass" style="justify-content:center;"><span>Sign up</span></a>
+      </div>
+      <div class="price-card featured glass reveal reveal-delay-1">
+        <span class="price-badge">Most popular</span>
+        <h3>Premium</h3>
+        <p class="desc">Ideal for those seeking advanced styling.</p>
+        <div class="price-amount"><span class="amt">$9</span><span class="per">/mo</span></div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Unlimited outfits</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Full wardrobe analysis</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Personalized style coach</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority support</li>
+        </ul>
+        <a href="#" class="btn btn-primary" style="justify-content:center;"><span>Contact sales</span></a>
+      </div>
+      <div class="price-card glass reveal reveal-delay-2">
+        <h3>Elite</h3>
+        <p class="desc">Best for ultimate fashion experience.</p>
+        <div class="price-amount"><span class="amt">$29</span><span class="per">/mo</span></div>
+        <ul class="price-feats">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>VIP styling sessions</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Advanced trend analysis</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Exclusive brand access</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5L6 11.5L13 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>24/7 dedicated support</li>
+        </ul>
+        <a href="#" class="btn btn-glass" style="justify-content:center;"><span>Contact sales</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA (video panel) ============ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="cta-panel glass reveal">
+      <video id="ctaScrubVideo" class="scrub" muted playsinline preload="auto">
+        <source src="assets/boutique-bg.webm" type="video/webm">
+    <source src="assets/boutique-bg.mp4" type="video/mp4">
+      </video>
+      <h2>Style with Stencilla. Start today.</h2>
+      <div class="cta-actions">
+        <a href="#pricing" class="btn btn-primary"><span>Sign up</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+        <a href="#" class="btn btn-dark"><span>Learn more</span><span class="btn-arrow"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="footer-top glass reveal">
+      <div class="footer-brand">
+        <a href="#home" class="logo"><span class="dot"></span>Stencilla</a>
+        <p>contact@stencilla.com</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <a href="#product">Product</a>
+          <a href="#features">Features</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h5>Socials</h5>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">X</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Stencilla. All rights reserved.</span>
+      <span class="ai-badge glass"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--amber);display:inline-block;"></span>AI tools</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bg-fixed">
+  <video id="bgScrubVideo" class="scrub" muted playsinline preload="auto">
+    <source src="assets/boutique-bg.webm" type="video/webm">
+    <source src="assets/boutique-bg.mp4" type="video/mp4">
+  </video>
+</div>
+<div class="bg-wash"></div>
+<div class="grain"></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
